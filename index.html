@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>NEON CITY FLOW</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="city-canvas"></canvas>
+
+  <!-- Top Telemetry Bar -->
+  <div id="top-bar">
+    <div class="bar-cluster">
+      <div class="glass-pill">
+        <span class="brand-tag">NEON CITY FLOW</span>
+        <div class="metric">
+          <span class="metric-lbl">Pop</span>
+          <span id="m-pop" class="metric-val cyan">0</span>
+        </div>
+        <div class="metric">
+          <span class="metric-lbl">Credits</span>
+          <span id="m-credits" class="metric-val amber">1200</span>
+        </div>
+        <div class="metric">
+          <span class="metric-lbl">Income</span>
+          <span id="m-income" class="metric-val emerald">+0/m</span>
+        </div>
+        <div class="metric">
+          <span class="metric-lbl">Power</span>
+          <span id="m-power" class="metric-val violet">0/0 MW</span>
+        </div>
+        <div class="metric">
+          <span class="metric-lbl">Flow</span>
+          <span id="m-flow" class="metric-val emerald">100%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bar-cluster">
+      <div class="speed-group">
+        <button class="speed-btn" data-speed="0" type="button">⏸</button>
+        <button class="speed-btn active" data-speed="1" type="button">1x</button>
+        <button class="speed-btn" data-speed="2" type="button">2x</button>
+        <button class="speed-btn" data-speed="3" type="button">3x</button>
+      </div>
+      <button id="btn-sandbox" class="ctrl-btn" type="button">∞ Sandbox</button>
+      <button id="btn-heat" class="ctrl-btn" type="button">🚦 Traffic</button>
+      <button id="btn-time" class="ctrl-btn" type="button">🌙 Midnight</button>
+      <button id="btn-center" class="ctrl-btn" type="button">🎯 Center</button>
+      <button id="btn-new" class="ctrl-btn" type="button">🌊 New Map</button>
+      <button id="btn-music" class="ctrl-btn" type="button">🎵 Lo-Fi</button>
+      <button id="btn-sfx" class="ctrl-btn" type="button">🔊</button>
+    </div>
+  </div>
+
+  <!-- Gentle Milestone Progress -->
+  <div id="milestone-pill">
+    <span id="ms-text">Next: Neon Outpost</span>
+    <div id="milestone-bar"><div id="milestone-fill"></div></div>
+  </div>
+
+  <!-- Toast Banner -->
+  <div id="toast">Welcome to Neon City Flow</div>
+
+  <!-- Live Tile Inspector -->
+  <div id="hover-card">
+    <div class="hover-title">
+      <span id="hover-title">Open Land</span>
+      <span id="hover-badge" style="color:#22d3ee;font-size:11px"></span>
+    </div>
+    <div id="hover-detail" class="hover-detail"></div>
+  </div>
+
+  <!-- Bottom Tool Dock -->
+  <div id="dock-wrap">
+    <div id="tool-dock"></div>
+    <div id="hint-strip">Tap / Drag: Paint · 2-Finger Scroll: Pan · Pinch / +/-: Zoom · Space+Glide: Pan · Keys 1–8, X, H</div>
+  </div>
+
+  <script src="city_audio.js"></script>
+  <script src="city_sim.js"></script>
+  <script src="city_render.js"></script>
+  <script src="city_main.js"></script>
+</body>
+</html>
